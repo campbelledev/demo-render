@@ -11,6 +11,11 @@ import java.util.List;
 @RestController
 public class EtudiantController {
 
+//Quand quelqu'un visite /, réponds avec ce message. permet que le lien sur render renvoit un msg
+    @GetMapping("/")
+    public String accueil() {
+        return "API Demo Render opérationnelle 🚀";
+    }
     // @GetMapping("/etudiants") écoute les requêtes HTTP GET sur /etudiants
     // List.of(...) crée une liste immutable en Java 9+
     @GetMapping("/etudiants")
